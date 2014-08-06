@@ -1,0 +1,6 @@
+[user]
+	email = j.rogena@cgiar.org
+	name = Jason Rogena
+	signingkey = 0xDB042D0132123B07
+[alias]
+   plog = log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
