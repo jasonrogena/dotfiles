@@ -13,3 +13,9 @@ git
 ---
 configs for git include:
 -    .gitconfig User specific git configuration file
+
+
+tmux
+----
+configs for tmux include:
+-    .tmux.conf Main user specific tmux config file
