@@ -15,6 +15,7 @@ Configs for git include:
 -    .gitconfig User specific git configuration file
 
 
+<<<<<<< HEAD
 mutt
 ---
 Configs for mutt include:
@@ -24,5 +25,5 @@ Configs for mutt include:
 
 tmux
 ----
-Config files for tmux include:
--    .tmux.conf
+configs for tmux include:
+-    .tmux.conf Main user specific tmux config file
