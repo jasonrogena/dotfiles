@@ -13,3 +13,10 @@ git
 ---
 configs for git include:
 -    .gitconfig User specific git configuration file
+
+
+mutt
+---
+configs for mutt including:
+-    .muttrc
+-    .mutt-colors-solarized-dark-16.muttrc
