@@ -11,12 +11,18 @@ Configs for vim include:
 
 git
 ---
-configs for git include:
+Configs for git include:
 -    .gitconfig User specific git configuration file
 
 
 mutt
 ---
-configs for mutt including:
+Configs for mutt include:
 -    .muttrc
 -    .mutt-colors-solarized-dark-16.muttrc
+
+
+tmux
+----
+Config files for tmux include:
+-    .tmux.conf
