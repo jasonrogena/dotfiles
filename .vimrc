@@ -1,7 +1,7 @@
 set nu
-set ts=3
+set ts=4
 set expandtab
-set sw=3
+set sw=4
 set bs=2
 set bg=dark
 set paste
