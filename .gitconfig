@@ -4,4 +4,15 @@
 	signingkey = 0xDB042D0132123B07
 [alias]
    plog = log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
-   commit = commit -S
+   scommit = commit -S -s
+   stag = tag -a -s
+[gpg]
+	program = gpg
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[core]
+	editor = vim
