@@ -1,18 +1,22 @@
 [user]
-	email = jasonrogena@gmail.com
-	name = Jason Rogena
-	signingkey = 0xDB042D0132123B07
+  email = jasonrogena@gmail.com
+  name = Jason Rogena
+  signingkey = 0xDB042D0132123B07
 [alias]
-   plog = log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
-   scommit = commit -S -s
-   stag = tag -a -s
+  plog = log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
+  scommit = commit -S -s
+  stag = tag -a -s
+  srebase = rebase -S
+  authorshow = show --pretty='full'
 [gpg]
-	program = gpg
+  program = gpg
 [push]
-	default = simple
+  default = simple
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
 [core]
-	editor = vim
+  editor = vim
+[color]
+	ui = auto
