@@ -18,5 +18,3 @@
   required = true
 [core]
   editor = vim
-[color]
-	ui = auto
