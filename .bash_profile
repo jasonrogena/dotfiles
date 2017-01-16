@@ -18,7 +18,7 @@ else
 fi
 
 adb_wifi() {
-    adb devices
+	adb devices
     echo "Enter the serial number for the device you want to switch to WiFi"
     
     read serialNo
@@ -27,7 +27,13 @@ adb_wifi() {
     if [ -z "${ipAddr}" ]; then
         ipAddr=`adb -s ${serialNo} shell netcfg | sed -n 's/wlan0[ ]*UP[ ]*\([0-9]*\.[0-9]*\.[0-9]*\.[0-9]*\).*/\1/p'`
     fi
-    echo "IP Addres is "${ipAddr}
-    adb -s ${serialNo} tcpip 5555
-    adb connect ${ipAddr}:5555
+
+    if ! [ -z "${ipAddr}" ]; then
+        echo "IP Addres is "${ipAddr}
+        adb -s ${serialNo} tcpip 5555
+        adb connect ${ipAddr}:5555
+		echo "adb connect ${ipAddr}:5555" > ~/.adb_connect_history 
+    else
+        echo "Could not connect to the device on WiFi. Check the connection"
+    fi	
 }
