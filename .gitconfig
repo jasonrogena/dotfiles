@@ -18,3 +18,5 @@
   required = true
 [core]
   editor = vim
+[commit]
+  template = ~/.gitmessage.txt
