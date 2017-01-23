@@ -1,6 +1,7 @@
 export PATH=/opt/pkg/sbin:/opt/pkg/bin:~/Library/Android/sdk/platform-tools:~/Library/Android/sdk/tools:$PATH
 export MANPATH=/opt/pkg/man:$MANPATH
 export CLICOLOR=1
+export ONA_GIT_COMMITER_INITIALS="JR"
 [ -r ~/.bashrc ] && source ~/.bashrc
 
 #Git Branch Label
@@ -36,4 +37,10 @@ adb_wifi() {
     else
         echo "Could not connect to the device on WiFi. Check the connection"
     fi	
+}
+
+# Obtained from https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
+# example: smartresize inputfile.png 1000 outputdir/
+smartresize() {
+   mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1
 }
