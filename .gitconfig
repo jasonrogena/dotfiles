@@ -9,7 +9,7 @@
   srebase = rebase -S
   authorshow = show --pretty='full'
 [gpg]
-  program = gpg
+  program = gpg2
 [push]
   default = simple
 [filter "lfs"]
